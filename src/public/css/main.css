@@ -3,6 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'ALS-Hauss-Regular';
   box-sizing: border-box;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -17,6 +18,9 @@ input,
 button {
   border: none;
   outline: none;
+}
+.main {
+  margin-top: 30px;
 }
 .container {
   max-width: 1200px;
@@ -78,8 +82,34 @@ button {
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution {
   margin-top: 5px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -10px;
+  transform: translateY(100%);
+  border-radius: 24px;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name,
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 24px 10px;
+  cursor: pointer;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name:last-child,
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years:last-child {
+  border-bottom: none;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution.hide {
+  display: none;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item #education-list,
+.pop-up .wrapper-educational-institution .educational-institution-item #year-list {
+  background-color: #fff;
+  box-shadow: 0 0 8px;
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .educational-institution {
+  margin-top: 4px;
   font-size: 20px;
   line-height: 22px;
   color: #271919;
@@ -92,7 +122,12 @@ button {
   height: 23px;
   background-image: url('../icon/arrow-bottom.svg');
   background-repeat: no-repeat;
+  transform: rotate(180deg);
   cursor: pointer;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .arrom-botton.institution.close,
+.pop-up .wrapper-educational-institution .educational-institution-item .arrom-botton.years.close {
+  transform: rotate(0deg);
 }
 .pop-up .education-item {
   position: relative;
@@ -196,6 +231,7 @@ button {
   border-radius: 500px;
   font-size: 18px;
   line-height: 24px;
+  transition: 0.3s;
   cursor: pointer;
 }
 .pop-up .save-data-user .education-button.save {
@@ -203,10 +239,16 @@ button {
   color: #fff;
   margin-right: 24px;
 }
+.pop-up .save-data-user .education-button.save:hover {
+  background-color: #d01e18;
+}
 .pop-up .save-data-user .education-button.cancellation {
   border: 2px solid #e5e5e5;
   background-color: transparent;
   color: #a2a2ae;
+}
+.pop-up .save-data-user .education-button.cancellation:hover {
+  box-shadow: 0 0 3px;
 }
 .pop-up .save-data-user .signature {
   position: relative;

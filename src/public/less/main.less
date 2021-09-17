@@ -2,6 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-family: @main-font;
     box-sizing: border-box;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -23,6 +24,10 @@ body {
 input, button {
     border: none;
     outline: none;
+}
+
+.main {
+    margin-top: 30px;
 }
 
 .container {
@@ -84,8 +89,33 @@ input, button {
             }
             .block-educational-institution {
                 margin-top: 5px;
+                z-index: 1;
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: -10px;
+                transform: translateY(100%);
+                border-radius: 24px;
+                .educational-institution.educational-name,
+                .educational-institution.years {
+                    border-bottom: 1px solid #e5e5e5;
+                    padding: 10px 24px 10px;
+                    cursor: pointer;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+            .block-educational-institution.hide { 
+                display: none;
+            }
+            #education-list,
+            #year-list {
+                background-color: #fff;
+                box-shadow: 0 0 8px;
             }
             .educational-institution {
+                margin-top: 4px;
                 font-size: 20px;
                 line-height: 22px;
                 color: #271919;
@@ -98,7 +128,12 @@ input, button {
                 height: 23px;
                 background-image: url('../icon/arrow-bottom.svg');
                 background-repeat: no-repeat;
+                transform: rotate(180deg);
                 cursor: pointer;
+            }
+            .arrom-botton.institution.close,
+            .arrom-botton.years.close {
+                transform: rotate(0deg);
             }
         }
     }
@@ -203,17 +238,24 @@ input, button {
             border-radius: 500px;
             font-size: 18px;
             line-height: 24px;
+            transition: 0.3s;
             cursor: pointer;
         }
         .education-button.save {
             background-color: #e62b25;
             color: #fff;
             margin-right: 24px;
+            &:hover {
+                background-color: darken(#e62b25, 7%);
+            }
         }
         .education-button.cancellation {
             border: 2px solid #e5e5e5;
             background-color: transparent;
             color: #a2a2ae;
+            &:hover {
+                box-shadow: 0 0 3px;
+            }
         }
         .signature {
             position: relative;
