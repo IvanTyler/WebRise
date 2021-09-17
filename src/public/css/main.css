@@ -1,0 +1,230 @@
+@import url('../css/main-fonts.css');
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'ALS-Hauss-Regular';
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: gray;
+}
+@font-face {
+  font-family: 'ALS-Hauss-Regular';
+  src: url('../fonts/ALS-Hauss/ALS-Hauss-Regular.woff') format('woff'), url('../fonts/ALS-Hauss/ALS-Hauss-Regular.woff2') format('woff2');
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container-pop-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-up {
+  width: 920px;
+  max-width: 100%;
+  padding: 48px 48px 40px 48px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.pop-up .pop-up-title {
+  font-size: 28px;
+  line-height: 37px;
+  color: #271919;
+}
+.pop-up .wrapper-educational-institution {
+  display: flex;
+  margin-top: 42px;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item {
+  position: relative;
+  width: 400px;
+  flex-grow: 1;
+  padding-left: 24px;
+  padding-right: 30px;
+  padding-top: 13px;
+  padding-bottom: 24px;
+  margin-top: 0;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item::before {
+  display: none;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item:first-child {
+  margin-right: 24px;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .educational-institution-title {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .educational-institution-title:after {
+  position: absolute;
+  right: -10px;
+  top: -2px;
+  content: '*';
+  color: #e62b25;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution {
+  margin-top: 5px;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .educational-institution {
+  font-size: 20px;
+  line-height: 22px;
+  color: #271919;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .arrom-botton {
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 11.5px);
+  width: 43px;
+  height: 23px;
+  background-image: url('../icon/arrow-bottom.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.pop-up .education-item {
+  position: relative;
+  height: 80px;
+  border: 1px solid #e5e5e5;
+  border-radius: 24px;
+  margin-top: 32px;
+  padding: 30px 46px;
+  color: #a2a2ae;
+}
+.pop-up .education-item .education-input {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 23px;
+}
+.pop-up .education-item::before {
+  position: absolute;
+  left: 34px;
+  top: 28px;
+  content: '*';
+  color: #f99b1c;
+  font-size: 20px;
+}
+.pop-up .education-item.loading-document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  font-size: 22px;
+  line-height: 36px;
+}
+.pop-up .education-item.loading-document .document {
+  color: #e62b25;
+}
+.pop-up .education-item.loading-document .openexplorer {
+  color: #271919;
+}
+.pop-up .education-item.loading-document::before {
+  display: none;
+}
+.pop-up .education-item.diploma-qualification {
+  padding-left: 35px;
+}
+.pop-up .education-item.diploma-qualification::before {
+  position: absolute;
+  left: 24px;
+  top: 28px;
+  content: '*';
+  color: #e62b25;
+  font-size: 20px;
+}
+.pop-up .wrapper-diploma {
+  display: flex;
+}
+.pop-up .wrapper-diploma .education-item {
+  width: 400px;
+  flex-grow: 1;
+}
+.pop-up .wrapper-diploma .education-item:first-child {
+  margin-right: 24px;
+}
+.pop-up .nostrification {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+.pop-up .nostrification .nostrification-check {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #CFCFCF;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pop-up .nostrification .nostrification-check.active {
+  background-image: url('../icon/check-mark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pop-up .nostrification .title-nostrification {
+  margin-left: 12px;
+  color: #271919;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.pop-up .save-data-user {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.pop-up .save-data-user .save-data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pop-up .save-data-user .education-button {
+  width: 300px;
+  height: 60px;
+  border-radius: 500px;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.pop-up .save-data-user .education-button.save {
+  background-color: #e62b25;
+  color: #fff;
+  margin-right: 24px;
+}
+.pop-up .save-data-user .education-button.cancellation {
+  border: 2px solid #e5e5e5;
+  background-color: transparent;
+  color: #a2a2ae;
+}
+.pop-up .save-data-user .signature {
+  position: relative;
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a2a2ae;
+}
+.pop-up .save-data-user .signature:before {
+  position: absolute;
+  left: -18px;
+  top: 0;
+  content: '*';
+  color: #e62b25;
+  font-size: 20px;
+}
+.pop-up .save-data-user .signature.cancellation:before {
+  content: '*';
+  color: #e7be24;
+}
