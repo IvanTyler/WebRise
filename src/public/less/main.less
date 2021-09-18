@@ -96,13 +96,24 @@ input, button {
                 bottom: -10px;
                 transform: translateY(100%);
                 border-radius: 24px;
+                transition: 0.3s;
                 .educational-institution.educational-name,
                 .educational-institution.years {
+                    margin-top: 0;
                     border-bottom: 1px solid #e5e5e5;
                     padding: 10px 24px 10px;
                     cursor: pointer;
+                    transition: 0.3s;
+                    &:first-child {
+                        border-radius: 24px 24px 0 0;
+                    }
                     &:last-child {
+                        border-radius: 0 0 24px 24px;
                         border-bottom: none;
+                    }
+                    &:hover {
+                        background-color: #1991eb;
+                        color: #fff;
                     }
                 }
             }
@@ -129,11 +140,13 @@ input, button {
                 background-image: url('../icon/arrow-bottom.svg');
                 background-repeat: no-repeat;
                 transform: rotate(180deg);
+                transition: 0.4s;
                 cursor: pointer;
             }
             .arrom-botton.institution.close,
             .arrom-botton.years.close {
                 transform: rotate(0deg);
+                transform: scalex(-1);
             }
         }
     }

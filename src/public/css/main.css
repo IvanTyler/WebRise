@@ -89,16 +89,29 @@ button {
   bottom: -10px;
   transform: translateY(100%);
   border-radius: 24px;
+  transition: 0.3s;
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name,
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years {
+  margin-top: 0;
   border-bottom: 1px solid #e5e5e5;
   padding: 10px 24px 10px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name:first-child,
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years:first-child {
+  border-radius: 24px 24px 0 0;
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name:last-child,
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years:last-child {
+  border-radius: 0 0 24px 24px;
   border-bottom: none;
+}
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.educational-name:hover,
+.pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution .educational-institution.years:hover {
+  background-color: #1991eb;
+  color: #fff;
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .block-educational-institution.hide {
   display: none;
@@ -123,11 +136,13 @@ button {
   background-image: url('../icon/arrow-bottom.svg');
   background-repeat: no-repeat;
   transform: rotate(180deg);
+  transition: 0.4s;
   cursor: pointer;
 }
 .pop-up .wrapper-educational-institution .educational-institution-item .arrom-botton.institution.close,
 .pop-up .wrapper-educational-institution .educational-institution-item .arrom-botton.years.close {
   transform: rotate(0deg);
+  transform: scalex(-1);
 }
 .pop-up .education-item {
   position: relative;

@@ -1,5 +1,3 @@
-console.log('js work')
-
 const education = {
     'Среднее профессиональное': ['1996', '1997', '1998'],
     'Среднее специальное': ['1992', '1993', '1994'],
@@ -8,7 +6,6 @@ const education = {
 };
 
 const newArrEducation = Object.entries(education)
-console.log(newArrEducation)
 
 for (let [key, value] of newArrEducation) {
     const newEducation = document.createElement('li')
@@ -22,8 +19,6 @@ for (let [key, value] of newArrEducation) {
         if (event.target.classList.contains('educational-name')) {
             const institutionName = event.target.innerText
             titleInstution.innerText = institutionName
-            $educationList.classList.add('hide')
-            $openInstitution.classList.add('close')
         }
         if (key === titleInstution.innerText) {
             const $yearList = document.querySelector('#year-list')
@@ -35,7 +30,6 @@ for (let [key, value] of newArrEducation) {
                 newYears.innerText = el
                 $yearList.appendChild(newYears)
             })
-            console.log('current >>>', value)
         }
     })
     if (key === titleInstution.innerText) {
@@ -89,8 +83,6 @@ $yearList.addEventListener('click', (event) => {
     if (event.target.classList.contains('years')) { 
         const institutionYears = event.target.innerText
         $titleYear.innerText = institutionYears
-        $openYears.classList.add('close')
-        $yearList.classList.add('hide')
     }
 })
 
